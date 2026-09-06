@@ -7,7 +7,7 @@
 
 @media (max-width: 500px) {
     .tpay-login-box {
-     margin: 0 10px;
+        margin: 0 10px;
     }
 }
 
@@ -27,8 +27,13 @@ body {
     max-width: 400px;
 }
 
+.welcome-back-section {
+    display: block;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
 h1 {
-    margin-bottom: 10px;
     color: #6e02fa;
     font-size: 26px;
     font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -39,7 +44,6 @@ h1 {
     color: #6e02fa;
     font-size: 100px;
     margin-left: 110px;
-    margin-bottom: 20px;
 }
 
 h2 {
@@ -47,24 +51,29 @@ h2 {
     font-size: 30px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
-    margin-bottom: 10px;
     margin-left: 80px;
 }
 
-.tpay-login-box p {
+.welcome-back-section p {
     color: #000000;
     font-size: 15px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-bottom: 10px;
     font-style: italic;
-    margin-left: 20px;
+    margin-left: 40px;
+    margin-top: 10px;
+    font-weight: 800px;
+}
+
+.email-input {
+    max-width: 100%;
 }
 
 #email {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 2px solid;
+    border: 3px solid;
     color: #000000;
     border-radius: 15px 15px;
     margin-top: 5px;
@@ -75,14 +84,14 @@ h2 {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 2px solid; 
+    border: 3px solid;
     color: #000000;
     border-radius: 15px 15px;
     margin-top: 5px;
     padding-left: 30px;
 }
 
-#login-form button {
+.email-login-section button {
     background-color: #6e02fa;
     border: none;
     border-radius: 18px 18px;
@@ -93,7 +102,7 @@ h2 {
     cursor: pointer;
 }
 
-#login-form button:hover {
+.email-login-section button:hover {
     filter: brightness(100%);
     background-color: #47059c;
 }
@@ -101,14 +110,15 @@ h2 {
 .login-divider {
     display: flex;
     align-items: center;
-    margin: 5px;
+    margin-top: 15px;
     border: none;
+    margin-bottom: 15px;
 }
 
 .login-divider::before {
     flex: 1;
     content: "";
-    height: 2px;
+    height: 3px;
     background-color: #000000;
     margin-right: 7px;
 }
@@ -117,32 +127,48 @@ h2 {
 .login-divider::after {
     flex: 1;
     content: "";
-    height: 2px;
+    height: 3px;
     background-color: #000000;
     margin-left: 7px;
 }
 
-.email-input i {
+.fa-envelope {
     position: absolute;
-    margin-left: 10px;
-    margin-top: 18px;
+    margin-top: 35px;
+    margin-right: 30px;
 }
 
-.email-input:focus {
-    filter: brightness(130%);
-    background-color: #ffffff;
-    border: none;
+#email:focus {
+    filter: brightness(50%);
+    background-color: transparent;
+    color: #000000;
+    outline: none;
+    border: 3px solid #000000;
+}
+
+#password:focus {
+    filter: brightness(50%);
+    background-color: transparent;
+    color: #000000;
+    outline: none;
+    border: 3px solid #000000;
 }
 
 .fa-lock {
-    position: absolute;
+    position: relative;
     margin-left: 10px;
     margin-top: 18px;
 }
 
 .email-login-cta {
     display: flex;
-    padding-top: 5px;
+    margin-top: 5px;
+}
+
+.remember-me {
+    margin-left: 90px;
+    font-size: medium;
+    font-weight: bold;
 }
 
 .social-login-icons {
@@ -157,12 +183,50 @@ h2 {
     color: #7108fa
 }
 
-.social-login-icons a {
-    color: #6f02fd;
+.social-login-icons i {
     font-size: 30px;
 }
 
-.social-login-icons a:hover {
+.social-login-icons i:hover {
     filter: brightness(70%);
     cursor: pointer;
+}
+
+.fa-google {
+    color: #fc7d07;
+}
+
+.fa-facebook {
+color: #0654fc;
+}
+
+.fa-x-twitter {
+color: #000000;
+}
+
+.fa-apple {
+    color: #000000
+}
+
+.other-login-actions p {
+    margin-left: 40px;
+    font-style: italic;
+    font-weight: bold;
+    font-size: medium;
+    margin-top: 10px;
+}
+
+.other-login-actions a:hover {
+    filter: brightness(70%);
+}
+
+.email-login-cta p {
+    font-style: italic;
+    font-weight: bold;
+   font-size: medium;
+   margin-left: 15px;
+}
+
+.email-login-cta p:hover {
+    filter: brightness(70%);
 }
